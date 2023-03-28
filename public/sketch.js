@@ -11,16 +11,16 @@ let myColour // To keep track of the random color
 
 function setup () {
    createCanvas (576, 324) // Creates a canvas 
-   myColour = color(random(255), random(255), random(255)) // "myColour" is given a random colour
-   frameRate(100) // displays 100 frames in a second
+   myColour = color (random(255), random(255), random(255)) // "myColour" is given a random colour
+   frameRate (100) // displays 100 frames in a second
 }
 
 function draw () {
    background ("black") // Black background is drawn 
 
-   change_color() // change_color function is called
-   fill(myColour) // the draw_shape function is coloured with a random colour
-   draw_shape (); // draw shape function is called
+   change_color () // change_color function is called
+   fill (myColour) // the draw_shape function is coloured with a random colour
+   draw_shape () // draw shape function is called
 
 
    // RMIT text is created
@@ -33,7 +33,7 @@ function draw () {
 
 
    // Creative Coding Specialisation text is created
-   textSize(60) 
+   textSize (60) 
    text ("Creative Coding", 288, 190) 
    text ("Specialisation", 288, 250)
 
@@ -52,7 +52,7 @@ function draw_shape () {
    // for loop repeats 19 times creating 19 random vertices for the shape
    for (let i = 0; i < 20; i++) {
    const cnr = rand_coordinate ()
-   vertex (cnr.x, cnr.y)
+   vertex (cnr.x, cnr.y) // 19 vertices are given with different co-ordinates from rand_coordinate
    }
    endShape ()
 }
@@ -62,7 +62,7 @@ function change_color () {
 
    // when the amount of frames increase over 100 then myColour changes into a different random colour and the counter resets to 0
    if (counter > 100) {
-      myColour = color(random(255), random(255), random(255))
+      myColour = color (random(255), random(255), random(255))
       counter = 0
    }
 }
