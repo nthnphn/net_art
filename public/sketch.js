@@ -49,10 +49,10 @@ function rand_coordinate () {
 function draw_shape () { 
    beginShape () // begins recording vertices for a shape
 
-   // for loop repeats 19 times creating 19 random vertices for the shape
-   for (let i = 0; i < 20; i++) {
+   // for loop repeats 20 times creating 20 random vertices for the shape
+   for (let i = 0; i <= 20; i++) {
    const cnr = rand_coordinate ()
-   vertex (cnr.x, cnr.y) // 19 vertices are given with different co-ordinates from rand_coordinate
+   vertex (cnr.x, cnr.y) // 20 vertices are given with different co-ordinates from rand_coordinate
    }
    endShape ()
 }
