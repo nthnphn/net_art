@@ -12,7 +12,7 @@ let myColour // To keep track of the random color
 function setup () {
    createCanvas (576, 324) // Creates a canvas 
    myColour = color (random(255), random(255), random(255)) // "myColour" is given a random colour
-   frameRate (100) // displays 100 frames in a second
+   frameRate (20) // displays 100 frames in a second
 }
 
 function draw () {
@@ -20,12 +20,13 @@ function draw () {
 
    change_color () // change_color function is called
    fill (myColour) // the draw_shape function is coloured with a random colour
+   noStroke ()
    draw_shape () // draw shape function is called
 
 
    // RMIT text is created
    fill ("black") // all text will be the colour black
-   noStroke () 
+   //stroke ("white") 
    //textFont (fruitsDonut)
    textSize (100) 
    textAlign (CENTER) // the point of the text is alligned at the center
@@ -60,8 +61,8 @@ function draw_shape () {
 // Function used to change colour of the shapes every 100 frames
 function change_color () {
 
-   // when the amount of frames increase over 100 then myColour changes into a different random colour and the counter resets to 0
-   if (counter > 100) {
+   // when the amount of frames increase over 50 then myColour changes into a different random colour and the counter resets to 0
+   if (counter > 50) {
       myColour = color (random(255), random(255), random(255))
       counter = 0
    }
