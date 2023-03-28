@@ -58,7 +58,7 @@ function draw_shape () {
    endShape ()
 }
 
-// Function used to change colour of the shapes every 100 frames
+// Function used to change colour of the shapes every 50 frames
 function change_color () {
 
    // when the amount of frames increase over 50 then myColour changes into a different random colour and the counter resets to 0
