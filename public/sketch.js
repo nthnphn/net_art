@@ -18,7 +18,7 @@ function setup () {
 function draw () {
    background ("black") // Black background is drawn 
 
-   change_color () // change_color function is called
+   change_colour () // change_color function is called
    fill (myColour) // the draw_shape function is coloured with a random colour
    noStroke ()
    draw_shape () // draw shape function is called
@@ -59,7 +59,7 @@ function draw_shape () {
 }
 
 // Function used to change colour of the shapes every 50 frames
-function change_color () {
+function change_colour () {
 
    // when the amount of frames increase over 50 then myColour changes into a different random colour and the counter resets to 0
    if (counter > 50) {
