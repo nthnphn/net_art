@@ -4,7 +4,7 @@ document.body.style.overflow = `hidden`
 let counter = 0  // Used to count the number of frames
 let myColour // To keep track of the random color
 
-let slider 
+let slider //creates a slider variable
 
 //let fruitsDonut
 //function preload() {
@@ -27,7 +27,7 @@ function draw () {
 
    change_colour () // change_color function is called
    fill (myColour) // the draw_shape function is coloured with a random colour
-   noStroke ()
+   noStroke () // gives the shapes no strokes
    draw_shape () // draw shape function is called
 
 
