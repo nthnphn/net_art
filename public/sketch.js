@@ -4,6 +4,8 @@ document.body.style.overflow = `hidden`
 let counter = 0  // Used to count the number of frames
 let myColour // To keep track of the random color
 
+let slider 
+
 //let fruitsDonut
 //function preload() {
 //   fruitsDonut = loadFont ('fonts/Fruits Donut.ttf');
@@ -12,7 +14,12 @@ let myColour // To keep track of the random color
 function setup () {
    createCanvas (576, 324) // Creates a canvas 
    myColour = color (random(255), random(255), random(255)) // "myColour" is given a random colour
-   frameRate (20) // displays 100 frames in a second
+   frameRate (30) // displays 30 frames in a second
+
+
+   // create a slider at the bottom of the page that has a minimum value of 4 and a maximum value of 50
+   slider = createSlider(4, 50, 25) 
+   slider.position (10, 300)
 }
 
 function draw () {
@@ -50,10 +57,10 @@ function rand_coordinate () {
 function draw_shape () { 
    beginShape () // begins recording vertices for a shape
 
-   // for loop repeats 20 times creating 20 random vertices for the shape
-   for (let i = 0; i <= 20; i++) {
+   // for loop repeats the amount of times the slider value is set to 
+   for (let i = 0; i <= slider.value(); i++) {
    const cnr = rand_coordinate ()
-   vertex (cnr.x, cnr.y) // 20 vertices are given with different co-ordinates from rand_coordinate
+   vertex (cnr.x, cnr.y) // vertices are given with different co-ordinates from rand_coordinate
    }
    endShape ()
 }
